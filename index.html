@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weekly Chore Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Weekly Chore Planner</h1>
+    </header>
+
+    <main>
+      <section class="days-panel">
+        <h2>Days</h2>
+        <ul id="days-list">
+          <li data-day="Monday" class="day-item active">Monday</li>
+          <li data-day="Tuesday" class="day-item">Tuesday</li>
+          <li data-day="Wednesday" class="day-item">Wednesday</li>
+          <li data-day="Thursday" class="day-item">Thursday</li>
+          <li data-day="Friday" class="day-item">Friday</li>
+          <li data-day="Saturday" class="day-item">Saturday</li>
+          <li data-day="Sunday" class="day-item">Sunday</li>
+        </ul>
+
+        <button id="edit-days-btn" class="edit-days-btn">Edit Day Names</button>
+        <button id="change-start-btn" class="edit-days-btn">Change Starting Day</button>
+      </section>
+
+      <section class="chores-panel">
+        <div class="chores-header">
+          <h2 id="current-day-title">Monday</h2>
+
+          <form id="chore-form">
+            <input type="text" id="chore-input" placeholder="Add a new chore..." required />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+
+        <ul id="chores-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

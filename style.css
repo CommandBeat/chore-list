@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0d0f14;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.app {
+  background: #1a1d24;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f3f4f6;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+.days-panel {
+  border-right: 1px solid #2a2d36;
+  padding-right: 16px;
+}
+
+#days-list {
+  list-style: none;
+}
+
+.day-item {
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #23262f;
+  transition: 0.2s;
+}
+
+.day-item:hover {
+  background: #2d303a;
+}
+
+.day-item.active {
+  background: #4f46e5;
+  color: white;
+}
+
+.edit-days-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #374151;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-days-btn:hover {
+  background: #4b5563;
+}
+
+.chores-header {
+  margin-bottom: 12px;
+}
+
+#chore-form {
+  display: flex;
+  gap: 8px;
+}
+
+#chore-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #111318;
+  color: white;
+}
+
+#chore-form button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+#chore-form button:hover {
+  background: #4338ca;
+}
+
+.chore-item {
+  background: #23262f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 720px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .days-panel {
+    border-right: none;
+    border-bottom: 1px solid #2a2d36;
+    padding-bottom: 16px;
+  }
+}
